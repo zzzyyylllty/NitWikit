@@ -55,7 +55,7 @@ chunk-loading-basic:
   player-max-chunk-generate-rate: -1.0
   #为每个玩家生成分块的最大速率，设置为-1 则禁用。
   player-max-chunk-load-rate: 100
-  #任何单个播放器加载块的最大速率，设置为-1 则禁用。
+  #任何单个玩家加载块的最大速率，设置为-1 则禁用。
   player-max-chunk-send-rate: 75
   #服务器发送给单个玩家的最大速率。设置为-1 则禁用。
 ```
@@ -182,7 +182,7 @@ chunk-loading-basic:
   player-max-chunk-generate-rate: -1.0
   #为每个玩家生成分块的最大速率，设置为-1 则禁用。
   player-max-chunk-load-rate: 100
-  #任何单个播放器加载块的最大速率，设置为-1 则禁用。
+  #任何单个玩家加载块的最大速率，设置为-1 则禁用。
   player-max-chunk-send-rate: 75
   #服务器发送给单个玩家的最大速率。设置为-1 则禁用。
 ```
@@ -821,7 +821,9 @@ tick-inactive-villagers: true
 
 ## 红石
 
-### redstone-implementation
+### 红石引擎
+
+#### redstone-implementation
 
 在 `paper-world-default.yml` 中控制红石系统使用的引擎。
 
@@ -835,7 +837,9 @@ tick-inactive-villagers: true
 
 `ALTERNATE_CURRENT`是基于 [Alternate Current](https://modrinth.com/mod/alternate-current)。 更多信息请阅读该页面。
 
-### hopper.disable-move-event
+### 漏斗
+
+#### hopper.disable-move-event
 
 在 `paper-world-default.yml` 中控制漏斗的一个繁重的事件。
 
@@ -856,16 +860,6 @@ tick-inactive-villagers: true
 ```
 
 降低沙子或沙砾中的漏斗矿车之类的情况，启用该项可能会破坏一些红石装置。
-
-### optimize-explosions
-
-在 `paper-world-default.yml` 中控制是否启用爆炸优化。
-
-将此项设为`true`可以将原版爆炸算法替换成优化版本，略微牺牲非常小的爆炸伤害换取爆炸时的大量性能提升。
-
-```
-推荐值: true
-```
 
 ### tick-per
 
@@ -891,6 +885,18 @@ tick-inactive-villagers: true
 | 200%     | 中         | 8               | 2            |
 
 ---
+
+### 爆炸
+
+#### optimize-explosions
+
+在 `paper-world-default.yml` 中控制是否启用爆炸优化。
+
+将此项设为`true`可以将原版爆炸算法替换成优化版本，略微牺牲非常小的爆炸伤害换取爆炸时的大量性能提升。
+
+```
+推荐值: true
+```
 
 # 杂项优化
 
